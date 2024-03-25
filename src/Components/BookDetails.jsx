@@ -11,7 +11,7 @@ const BookDetails = () => {
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={book.image}
-                        className="max-w-sm w-96 bg-base-200 p-5"/>
+                        className="max-w-sm w-[500px] h-[650px] bg-base-200 p-5"/>
                     <div className="space-y-5">
                         <h1 className="text-5xl font-bold">{book.book_name}</h1>
                         <p className="text-[#131313CC] font-medium">By: {book.author}</p>
@@ -42,7 +42,7 @@ const BookDetails = () => {
                             <h1 className="font-semibold">{book.rating}</h1>
                         </div>
                         <div className="flex gap-4">
-                            <button className="btn border-2 border-gray-500">Read</button>
+                            <button className="btn border-2 border-gray-500 hover:bg-[#23BE0A] hover:text-white">Read</button>
                             <button className="btn bg-[#50B1C9] text-white">Wishlist</button>
                         </div>
                         

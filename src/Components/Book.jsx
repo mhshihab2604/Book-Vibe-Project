@@ -5,7 +5,7 @@ const Book = ({book}) => {
     return (
 
         <div>
-            <div>
+           <Link to={`/book/${book_id}`}>
                 <div className="card card-compact bg-base-100 shadow-xl border-2 rounded-lg p-5 space-y-3">
                     <figure className="bg-[#F3F3F3] py-10"><img className=" rounded-xl" src={image} alt="Shoes"/></figure>
                     <div className="flex justify-around text-[#23BE0A] font-medium">
@@ -21,13 +21,8 @@ const Book = ({book}) => {
                         <p>{category}</p>
                         <p className="flex items-center gap-4">{rating} <FaRegStar></FaRegStar></p>
                     </div>
-                    <div>
-                        <Link to={`/book/${book_id}`}>
-                            <button className="btn">Click</button>
-                        </Link>
-                    </div>
                 </div>
-            </div>
+           </Link>
         </div>
     );
 };
