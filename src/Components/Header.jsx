@@ -26,7 +26,7 @@ const Home = () => {
                             <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/pagesToRead">Pages to Read</Link>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost font-bold text-[#131313] text-xl lg:text-3xl">Book Vibe</a>
+                    <h1 className="font-bold text-[#131313] text-xl lg:text-3xl">Book Vibe</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-9">
