@@ -1,9 +1,9 @@
-
+import BarChart from "./BarChart";
 
 const PagesToRead = () => {
     return (
         <div>
-            <h1>Araf Ahmed</h1>
+            <BarChart></BarChart>
         </div>
     );
 };
