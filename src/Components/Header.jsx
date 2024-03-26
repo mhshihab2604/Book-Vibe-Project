@@ -24,6 +24,7 @@ const Home = () => {
                             <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/listedBooks">Listed Books</Link>
                             <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/pagesToRead">Pages to Read</Link>
                             <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/callToAction">Download</Link>
+                            <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/Contact">Contact Us</Link>
                         </ul>
                     </div>
                     <h1 className="font-bold text-[#131313] text-xl lg:text-3xl">Book Vibe</h1>
@@ -34,6 +35,7 @@ const Home = () => {
                         <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/listedBooks">Listed Books</Link>
                         <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/pagesToRead">Pages to Read</Link>
                         <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/callToAction">Download</Link>
+                        <Link className="hover:text-[#23BE0A] hover:border-2 hover:border-[#23BE0A] p-2 rounded-lg" to="/Contact">Contact Us</Link>
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">

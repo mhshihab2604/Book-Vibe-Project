@@ -15,6 +15,7 @@ import Home from './Components/Home.jsx';
 import BookDetails from './Components/BookDetails.jsx';
 import { Toaster } from 'react-hot-toast';
 import CallToAction from './Components/CallToAction.jsx';
+import Contact from './Components/Contact.jsx';
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/callToAction",
         element: <CallToAction></CallToAction>
+      },
+      {
+        path: "/Contact",
+        element: <Contact></Contact>
       },
       {
         path: "/book/:book_id",
