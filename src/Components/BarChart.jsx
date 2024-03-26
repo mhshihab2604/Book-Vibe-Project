@@ -1,34 +1,10 @@
 
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { getBooks } from '../Utils/LocalStorage';
+import { useEffect, useState } from 'react';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-const data = [
-    {
-      title: "Echoes of Destiny",
-      totalPages: 368
-    },
-    {
-      title: "Whispers in the Wind",
-      totalPages: 312
-    },
-    {
-      title: "Starsong Symphony",
-      totalPages: 432
-    },
-    {
-      title: "Whispers of Eternity",
-      totalPages: 288
-    },
-    {
-      title: "Midnight Symphony",
-      totalPages: 344
-    },
-    {
-      title: "Silent Whispers",
-      totalPages: 320
-    },
-  ];
-  
+
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
   ${x + width / 2}, ${y}
@@ -43,12 +19,19 @@ const TriangleBar = (props) => {
 };
 
 export default function App() {
+    
+    const [graph, setGraph] = useState([]);
+
+    useEffect(() => {
+        const totalReadedbooks = getBooks("read");
+        setGraph(totalReadedbooks);
+    },[])
   return (
     <div className="flex justify-center items-center h-screen">
       <BarChart
         width={1400}
         height={700}
-        data={data}
+        data={graph}
         margin={{
           top: 20,
           right: 30,
@@ -57,10 +40,10 @@ export default function App() {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="title" />
+        <XAxis dataKey="book_name" />
         <YAxis />
         <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
-          {data.map((entry, index) => (
+          {graph.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % 20]} />
           ))}
         </Bar>
@@ -70,3 +53,4 @@ export default function App() {
 }
 
 App.demoUrl = 'https://codesandbox.io/s/bar-chart-with-customized-shape-dusth';
+

@@ -1,9 +1,17 @@
 import {useLoaderData, useParams} from "react-router-dom";
+import {saveReadBooks, saveWishBooks } from "../Utils/LocalStorage";
 
+// const BookDetails = () => {
+//     const books = useLoaderData();
+//     const {book_id} = useParams();
+//     const book = books.find(book => book.book_id === book_id);
+//     console.log(book);
 const BookDetails = () => {
     const books = useLoaderData();
-    const {book_id} = useParams();
+    const { book_id } = useParams();
     const book = books.find(book => book.book_id === book_id);
+    const handleReadBooks = (book) => {saveReadBooks(book)};
+    const handleWishBooks = (book) => {saveWishBooks(book)};
     console.log(book);
     return (
         <div>
@@ -42,8 +50,8 @@ const BookDetails = () => {
                             <h1 className="font-semibold">{book.rating}</h1>
                         </div>
                         <div className="flex gap-4">
-                            <button className="btn border-2 border-gray-500 hover:bg-[#23BE0A] hover:text-white">Read</button>
-                            <button className="btn bg-[#50B1C9] text-white">Wishlist</button>
+                            <button onClick={() => handleReadBooks(book,"read")} className="btn border-2 border-gray-500 hover:bg-[#23BE0A] hover:text-white">Read</button>
+                            <button onClick={() => handleWishBooks(book, "wish")} className="btn bg-[#50B1C9] text-white">Wishlist</button>
                         </div>
                         
                     </div>
