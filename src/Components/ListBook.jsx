@@ -1,6 +1,7 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { BsPeople } from "react-icons/bs";
 import { LuFileBarChart } from "react-icons/lu";
+import { Link } from "react-router-dom";
 const ListBook = ({book}) => {
     return (
         <div>
@@ -30,7 +31,7 @@ const ListBook = ({book}) => {
                     <div className="flex gap-3 text-[#23BE0A] font-medium">
                         <h1 className="bg-[#328EFF26] text-[#328EFF] rounded-full p-2">Category: {book.category}</h1>
                         <h1 className="bg-[#FFAC3326] text-[#FFAC33] rounded-full p-2">Rating: {book.rating}</h1>
-                        <button className="btn text-white rounded-full bg-[#23BE0A]">View Details</button>
+                        <Link to={`/book/${book.book_id}`}><button className="btn text-white rounded-full bg-[#23BE0A]">View Details</button></Link>
                     </div>
                 </div>
             </div>

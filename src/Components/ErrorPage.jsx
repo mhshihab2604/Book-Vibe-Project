@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (
-        <div className="bg-[#AECFE3] min-h-screen min-w-full">
-            <div className="pt-20 space-y-10">
-                <h2 className="text-7xl text-center">Oops!!!</h2>
-                <img className="mx-auto h-[200px] w-[450px]" src="https://i.ibb.co/cgLZ6Hx/error.jpg" alt="" />
-                <div className="text-center mx-auto rounded-lg p-2 text-white font-medium bg-[#7E90FE] w-36">
-                    <Link to="/">Go back to home</Link>
-                </div>
+        <section
+            className="flex items-center h-full sm:p-16 dark:bg-gray-50 dark:text-gray-800">
+            <div
+                className="container flex flex-col items-center justify-center px-5 mx-auto my-8 space-y-8 text-center sm:max-w-md">
+                <img className="w-60" src="https://i.ibb.co/9VMR778/errorrr.png" alt="" />
+                <p className="text-3xl">Looks like our services are currently offline</p>
+
+                <Link className="px-8 py-3 font-semibold rounded dark:bg-[#23BE0A] dark:text-gray-50" t0="/">Back to homepage</Link>
             </div>
-        </div>
+        </section>
     );
 };
 
