@@ -1,4 +1,3 @@
-
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { getBooks } from '../Utils/LocalStorage';
 import { useEffect, useState } from 'react';

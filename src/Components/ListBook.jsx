@@ -5,25 +5,25 @@ const ListBook = ({book}) => {
     return (
         <div>
             <div className="card w-full lg:card-side gap-10 border-2 rounded-lg p-5">
-                <figure><img className="w-[230px] bg-base-300 p-5" src={book.image} alt="Movie"/></figure>
+                <figure className="min-w-[230px] h-56"><img className="w-full h-full object-cover bg-base-300 p-5" src={book.image} alt="Movie"/></figure>
                 <div className="space-y-4">
                     <div className="space-y-2">
                         <h1 className="text-lg font-semibold">{book.book_name}</h1>
                         <p>By: {book.author}</p>
                     </div>
-                    <div className="flex justify-around items-center gap-2 font-medium">
+                    <div className="flex justify-around items-center gap-2 font-medium flex-wrap">
                         <h1 className="font-semibold text-lg">Tag:</h1>
                         <h1 className="bg-[#F3F3F3] text-[#23BE0A] rounded-full p-1">#{book.tags[0]}</h1>
                         <h1 className="bg-[#F3F3F3] text-[#23BE0A] rounded-full p-1">#{book.tags[1]}</h1>
                         <div className="flex gap-2 items-center">
-                            <IoLocationOutline></IoLocationOutline>
+                            <IoLocationOutline className="lg:text-lg text-xl"></IoLocationOutline>
                             <p className="text-[#131313B3]">Year of Publishing: {book.yearOfPublishing}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
-                        <BsPeople></BsPeople> 
+                        <BsPeople className="lg:text-lg text-2xl"></BsPeople> 
                         <h1 className="pr-5">Publisher: {book.publisher}</h1>
-                        <LuFileBarChart></LuFileBarChart>
+                        <LuFileBarChart className="lg:text-lg text-2xl"></LuFileBarChart>
                         <h1>Page: {book.totalPages}</h1>
                     </div>
                     <hr />

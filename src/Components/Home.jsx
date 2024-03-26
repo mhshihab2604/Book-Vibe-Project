@@ -8,9 +8,9 @@ const Home = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img
                         src={myImage}
-                        className="max-w-sm"/>
+                        className="lg:max-w-sm w-[300px] lg:w-full"/>
                     <div className="space-y-10">
-                        <h1 className="text-2xl lg:text-6xl font-bold text-[#131313]">Books to freshen <br /> up your bookshelf</h1>
+                        <h1 className="text-3xl lg:text-6xl font-bold text-[#131313]">Books to freshen <br /> up your bookshelf</h1>
                         <Link className="btn w-32 bg-[#23BE0A] text-white" to="/listedBooks">View The List</Link>
                     </div>
                 </div>

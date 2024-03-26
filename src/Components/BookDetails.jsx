@@ -1,11 +1,5 @@
 import {useLoaderData, useParams} from "react-router-dom";
 import {saveReadBooks, saveWishBooks } from "../Utils/LocalStorage";
-
-// const BookDetails = () => {
-//     const books = useLoaderData();
-//     const {book_id} = useParams();
-//     const book = books.find(book => book.book_id === book_id);
-//     console.log(book);
 const BookDetails = () => {
     const books = useLoaderData();
     const { book_id } = useParams();
@@ -16,18 +10,18 @@ const BookDetails = () => {
     return (
         <div>
             <div className="hero min-h-screen">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row gap-10">
                     <img
                         src={book.image}
-                        className="max-w-sm w-[500px] h-[650px] bg-base-200 p-5"/>
+                        className="max-w-sm w-[300px] lg:w-[500px] h-[350px] lg:h-[650px] bg-base-200 p-5"/>
                     <div className="space-y-5">
-                        <h1 className="text-5xl font-bold">{book.book_name}</h1>
+                        <h1 className="text-3xl lg:text-5xl font-bold">{book.book_name}</h1>
                         <p className="text-[#131313CC] font-medium">By: {book.author}</p>
                         <hr />
-                        <h1>Islam</h1>
+                        <h1>{book.category}</h1>
                         <hr />
                         <h2><small className="font-semibold text-lg">Review:</small> {book.review}</h2>
-                        <div className="flex justify-between font-medium">
+                        <div className="flex justify-around lg:justify-between font-medium">
                             <h1 className="font-semibold text-lg">Tag:</h1>
                             <h1 className="bg-[#F3F3F3] text-[#23BE0A]  rounded-full p-1">#{book.tags[0]}</h1>
                             <h1 className="bg-[#F3F3F3] text-[#23BE0A]  rounded-full p-1">#{book.tags[1]}</h1>

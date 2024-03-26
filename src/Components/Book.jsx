@@ -7,7 +7,7 @@ const Book = ({book}) => {
         <div>
            <Link to={`/book/${book_id}`}>
                 <div className="card card-compact bg-base-100 shadow-xl border-2 rounded-lg p-5 space-y-3">
-                    <figure className="bg-[#F3F3F3] py-10"><img className=" rounded-xl" src={image} alt="Shoes"/></figure>
+                    <figure className="bg-[#F3F3F3] py-10"><img className="w-[300px] rounded-xl" src={image} alt="Shoes"/></figure>
                     <div className="flex justify-around text-[#23BE0A] font-medium">
                         <h1 className="bg-[#F3F3F3] rounded-full p-1">{tags[0]}</h1>
                         <h1 className="bg-[#F3F3F3] rounded-full p-1">{tags[1]}</h1>
