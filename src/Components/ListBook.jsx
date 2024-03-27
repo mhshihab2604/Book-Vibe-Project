@@ -28,7 +28,7 @@ const ListBook = ({book}) => {
                         <h1>Page: {book.totalPages}</h1>
                     </div>
                     <hr />
-                    <div className="flex gap-3 text-[#23BE0A] font-medium">
+                    <div className="flex items-center gap-3 text-[#23BE0A] font-medium">
                         <h1 className="bg-[#328EFF26] text-[#328EFF] rounded-full p-2">Category: {book.category}</h1>
                         <h1 className="bg-[#FFAC3326] text-[#FFAC33] rounded-full p-2">Rating: {book.rating}</h1>
                         <Link to={`/book/${book.book_id}`}><button className="btn text-white rounded-full bg-[#23BE0A]">View Details</button></Link>

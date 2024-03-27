@@ -21,7 +21,7 @@ const ListedBooks = () => {
 
     return (
         <div>
-            <h3 className='text-3xl font-bold  text-center mx-auto mt-20'>Books</h3>
+            <h3 className='text-4xl font-bold  text-center mx-auto mt-20'>Books</h3>
             <div>
                 <div className="dropdown dropdown-bottom flex items-center justify-center mt-8">
                     <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white">Sort By</div>

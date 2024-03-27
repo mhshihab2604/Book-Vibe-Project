@@ -1,9 +1,9 @@
 const CallToAction = () => {
     return (
         <section >
-            <h2 className="text-5xl font-bold  text-center mx-auto mt-20">Gallery</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold  text-center mx-auto mt-10 lg:mt-20">Gallery</h2>
 
-            <div className="py-6 dark:bg-gray-100 dark:text-gray-900 mt-28">
+            <div className="py-6 dark:bg-gray-100 dark:text-gray-900 mt-10 lg:mt-20">
                 <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
                     <img
                         src="https://i.ibb.co/CwVFzpx/64a59e-d83478710e1c491c88b178c31986d4d9-mv2.webp"
